@@ -11,6 +11,27 @@ Goals for this workshop:
 ### Intro
 See slide deck up to the Repl.it slide
 
+Turtle demo code:
+
+Repl - https://repl.it/repls/IllustriousLatestCallback
+
+```
+import turtle
+import random
+larry = turtle.Turtle()
+
+larry.shape('turtle')
+larry.color('green')
+larry.speed(0)
+
+colors = ['green', 'blue', 'red', 'yellow']
+
+for i in range(100):
+  larry.circle(i*3)
+  larry.left(10)
+  larry.color(random.choice(colors))
+```
+
 ### Python Basics
 * `print`, `type`, `input` commands
 * string, integers
@@ -38,7 +59,7 @@ Let us dissect the output a little bit:
 
 * We passed some text, `'Hello world'` to the `print()` command. This is why it was displayed in the console. **Anything that is between quotes in Python is called a `string`.** 
 
-Now, in addition to strings, we have integers in Python, which are round numbers with no decimal places.
+Now, in addition to strings, we have integers in Python, which are whole numbers with no decimal places or fractions.
 
 > Print an integer like `10` in the console.
 `print(10)`
@@ -94,6 +115,10 @@ some_variable = 'This is a variable string because this text is surrounded by qu
 other_variable = 6
 ```
 
+* Note the variable name - it is NOT in quotes. 
+
+* Also the convention in Python is to use all lowercase when creating your variable names. 
+
 > In your code editor this time, create a variable called `age` with a value equal to your age.
 
 > Then, write a `print()` command which will print your `age` variable.
@@ -116,10 +141,21 @@ What if we want to get some user input to work with? Python has an `input()` com
 ```
 # Python Basics
 
-age = input('What is your age?')
+age = input('What is your age? ')
 print(age)
+print(type(age))
 ```
 Here, we **assign** the input received to the variable `age`. 
+
+Note the type of object that `age` is, even though what we entered looks like an integer.
+
+We can convert the value of `age` from a string to an integer by using Python's built-in `int()` command:
+```
+age = int(age)
+print(age)
+print(type(age))
+```
+
 
 > Ask the user what their name is and assign that value to a new variable `name`. Then print the value of `name`.
 
@@ -131,7 +167,9 @@ Here are the basic math operators in Python:
 * `a*b` is a x b
 * `a/b` is a / b
 
-> In the Console, go through each of the above math operators using `a` as your age and `b` as your grade. 
+> In the Console, go through each of the above math operators using:
+* `a` as your age
+* `b` as your grade. 
 
 ##### Exercise
 
@@ -175,7 +213,7 @@ larry.shape('turtle')
 
 * `larry.shape('turtle')` - Now we are doing stuff on our newly created turtle called larry. There is a command to set the shape of larry to actually be a turtle versus a dot or a triangle or some default icon.
 
-How do we know what commands are available for larry and any Turtle in general? Well, we can look at the Turtle Book, which in general is called 'documentation'. Here is a website which goes through the Turtle documentation and what commands are available: https://www.geeksforgeeks.org/turtle-programming-python/
+How do we know what commands are available for larry and any Turtle in general? Well, we can look at the Turtle Book, which in general is called 'documentation'. Here is a website which goes through the Turtle documentation and what commands are available: https://docs.python.org/3.3/library/turtle.html?highlight=turtle#turtle-methods 
 
 > Press *run* to see larry now. Q) How do we change the color of larry to green?
 
@@ -232,7 +270,7 @@ for i in range(4):
     larry.left(90)
 ```
 
-> Q) So what does `range(4)` do?
+> Q) So what does `range(4)` do? 
 > Q) What is `i` and how does its value change each time the loop is run? Have a look at the output in the console. Refer to slide.
 
 * Note the indenting on the `for` commend, which tells Python that the following indented commands after the `:` belong to the loop. Otherwise, Python would not know when the loop finishes and the next command starts. 
@@ -258,7 +296,7 @@ for i in range(16):
 
 We can also create a circle with `larry.circle(100)`. 
 
-> Q) What does the 100 mean here? What about `-100`? 
+> Q) What does the 100 mean here? Radius What about `-100`? 
 
 So what if we now use our `for` loop with circles such as:
 ```
