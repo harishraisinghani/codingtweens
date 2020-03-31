@@ -1,4 +1,4 @@
-# Intro to Python
+# Intro to Python - Session 1
 
 Goals for this workshop:
 * Learn basics of what is computer programming
