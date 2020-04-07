@@ -1,5 +1,7 @@
 # Python Coding Series Recap
 
+It is recommended you go through this code using a cloud based code editor. For example, simply go to https://repl.it and create a new **Python** Repl. 
+
 ### Commands and instructions
 Let us look at our sample starting code:
 ```
